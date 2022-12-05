@@ -21,9 +21,9 @@
 ```
 apt install postfix -y
 ```
-![qownnotes-media-SBiPGx](../media/qownnotes-media-SBiPGx.png)
+![qownnotes-media-SBiPGx](./media/qownnotes-media-SBiPGx.png)
 
-![qownnotes-media-tjXHLf](../media/qownnotes-media-tjXHLf.png)
+![qownnotes-media-tjXHLf](./media/qownnotes-media-tjXHLf.png)
 
 
 ```
@@ -39,9 +39,9 @@ mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128 0.0.0.0/0
 
 ## Configure registry mail
 
-![qownnotes-media-nQdXjY](../media/qownnotes-media-nQdXjY.png)
+![qownnotes-media-nQdXjY](./media/qownnotes-media-nQdXjY.png)
 Configure register MX
-![qownnotes-media-bNKArG](../media/qownnotes-media-bNKArG.png)
+![qownnotes-media-bNKArG](./media/qownnotes-media-bNKArG.png)
 
 ## Using transport
 
@@ -112,7 +112,7 @@ Mode sv
 Socket inet:12301@localhost
 
 ```
-![qownnotes-media-yKAQDn](../media/qownnotes-media-yKAQDn.png)
+![qownnotes-media-yKAQDn](./media/qownnotes-media-yKAQDn.png)
 
 ## change /etc/default/opendkim
 ```/etc/default/opendkim
@@ -158,7 +158,7 @@ policyd-spf  unix  -       n       n       -       0       spawn
 
 ```
 
-![qownnotes-media-CzcGJe](../media/qownnotes-media-CzcGJe.png)
+![qownnotes-media-CzcGJe](./media/qownnotes-media-CzcGJe.png)
 
 
 ```
@@ -173,12 +173,12 @@ systemctl restart opendkim
 ```
 v=sp1 a:<domain> ip4:<host ip> ~all
 ```
-![qownnotes-media-ggqPEA](../media/qownnotes-media-ggqPEA.png)
+![qownnotes-media-ggqPEA](./media/qownnotes-media-ggqPEA.png)
 
 ## add public key /etc/opendkim/keys/$DOMAIN/mail.txt
 
 example
-![qownnotes-media-LIVIkT](../media/qownnotes-media-LIVIkT.png)
+![qownnotes-media-LIVIkT](./media/qownnotes-media-LIVIkT.png)
 
 
 
@@ -195,4 +195,4 @@ https://www.mail-tester.com/
 ![qownnotes-media-nRnEqB](./media/qownnotes-media-nRnEqB.png)
 
 
-mail -s "A mail sent using mailx" test-m521scbrp@srv1.mail-tester.com -r info@<domain > < sendmail.txt
+mail -s "A mail sent using mailx" test-m521scbrp@srv1.mail-tester.com -r info@`<domain>` < sendmail.txt
